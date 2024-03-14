@@ -88,7 +88,7 @@ class _BottomBarInspiredOutsideState extends State<BottomBarInspiredOutside> {
       items: widget.items,
       onTap: widget.onTap,
       chipStyle: widget.chipStyle ?? const ChipStyle(notchSmoothness: NotchSmoothness.defaultEdge),
-      curveSize: 70,
+      curveSize: 30,
       top: widget.top ?? -28,
       containerSize: 56,
       itemStyle: widget.itemStyle,

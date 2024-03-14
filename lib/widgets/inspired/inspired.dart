@@ -316,7 +316,7 @@ class _InspiredState extends State<Inspired> with TickerProviderStateMixin {
   Widget buildItem(BuildContext context, {required TabItem item, required int index, bool active = false}) {
     Color itemColor() {
       if (widget.fixed) {
-        return active ? widget.chipStyle!.background! : widget.color;
+        return active ? widget.chipStyle!.color! : widget.color;
       }
       return active ? widget.colorSelected : widget.color;
     }
@@ -380,7 +380,7 @@ class _InspiredState extends State<Inspired> with TickerProviderStateMixin {
             alignment: Alignment.center,
             child: BuildIcon(
               item: item,
-              iconColor: widget.fixed ? widget.colorSelected : itemColor,
+              iconColor:Colors.white,
               iconSize: iconSize,
               countStyle: widget.countStyle,
             ),
@@ -398,6 +398,22 @@ class _InspiredState extends State<Inspired> with TickerProviderStateMixin {
               countStyle: widget.countStyle,
             ),
           ),
+
+        ...[
+          // SizedBox(height: widget.pad),
+
+
+          Padding(padding: EdgeInsets.only(top: 20),
+
+          child:    Text(
+            item.title!,
+            style: Theme.of(context).textTheme.labelSmall?.merge(widget.titleStyle).copyWith(color: widget.colorSelected),
+            textAlign: TextAlign.center,
+          ),
+          )
+
+        ],
+
       ],
     );
   }

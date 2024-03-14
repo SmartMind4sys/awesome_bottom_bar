@@ -128,7 +128,7 @@ class _BottomBarCreativeState extends State<BottomBarCreative> {
                         children: [
                           highlightWidget,
                             widget.floatingTitleWidget ?? SizedBox()
-                        
+
 
                         ],
                       );
